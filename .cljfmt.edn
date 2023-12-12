@@ -1,2 +1,2 @@
-{:extra-indents {redque.redis/with [[:block 1]]}
+{:extra-indents {redque.redis/with [[:block 2]]}
  :alias-map {"redis" "redque.redis"}}
