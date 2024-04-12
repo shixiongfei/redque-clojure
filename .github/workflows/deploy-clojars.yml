@@ -9,14 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
-        with:
-          java-version: '11'
-          distribution: 'temurin'
-      - uses: DeLaGuardo/setup-clojure@main
-        with:
-          lein: 'latest'
-      - run: lein deploy clojars
+      - name: Install dependencies
+        run: lein deps
+      - name: Publish
         env:
           CLOJARS_USER: ${{ secrets.CLOJARS_USER }}
           CLOJARS_PASS: ${{ secrets.CLOJARS_PASS }}
+        run: lein deploy clojars
