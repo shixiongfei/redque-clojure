@@ -9,7 +9,7 @@
 ;;; https://github.com/shixiongfei/redque-clojure
 ;;;
 
-(defproject redque "0.1.0"
+(defproject io.github.shixiongfei/redque "0.1.0"
   :description "A reliable message queue base on Redis"
   :url "https://github.com/shixiongfei/redque-clojure"
   :license {:name "Apache-2.0"
